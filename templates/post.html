@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }} - BAS Foundry</title>
+    <meta name="description" content="{{ description }}">
+    <meta name="keywords" content="{{ keywords }}">
+    
+    <!-- Open Graph for social sharing -->
+    <meta property="og:title" content="{{ title }}">
+    <meta property="og:description" content="{{ description }}">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://basfoundry.com/blog/{{ slug }}">
+    
+    <!-- Schema.org markup for better SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "{{ title }}",
+      "description": "{{ description }}",
+      "author": {
+        "@type": "Organization",
+        "name": "BAS Foundry"
+      },
+      "datePublished": "{{ date }}",
+      "publisher": {
+        "@type": "Organization", 
+        "name": "BAS Foundry"
+      }
+    }
+    </script>
+    
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/" class="logo">BAS Foundry</a>
+            <div class="nav-links">
+                <a href="/blog">Blog</a>
+                <a href="/about">About</a>
+                <a href="/contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+        <article class="blog-post">
+            <header class="post-header">
+                <h1>{{ title }}</h1>
+                <div class="post-meta">
+                    <time datetime="{{ date }}">{{ date_formatted }}</time>
+                    <span class="reading-time">{{ reading_time }} min read</span>
+                </div>
+            </header>
+            
+            <div class="post-content">
+                {{ content }}
+            </div>
+            
+            <footer class="post-footer">
+                <div class="affiliate-disclosure">
+                    <h3>🔍 Affiliate Disclosure</h3>
+                    <p>This post contains affiliate links. If you purchase through these links, 
+                    we may earn a small commission at no additional cost to you. This helps support 
+                    our research and content creation. We only recommend products we genuinely believe 
+                    will help solve your problems.</p>
+                </div>
+                
+                <div class="share-links">
+                    <h3>Share This Post</h3>
+                    <a href="https://twitter.com/intent/tweet?text={{ title_encoded }}&url=https://basfoundry.com/blog/{{ slug }}" target="_blank">Twitter</a>
+                    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://basfoundry.com/blog/{{ slug }}" target="_blank">LinkedIn</a>
+                    <a href="https://www.reddit.com/submit?url=https://basfoundry.com/blog/{{ slug }}&title={{ title_encoded }}" target="_blank">Reddit</a>
+                </div>
+            </footer>
+        </article>
+    </main>
+    
+    <footer class="site-footer">
+        <p>&copy; 2026 BAS Foundry. Building better software solutions.</p>
+        <p><a href="/privacy">Privacy Policy</a> | <a href="/terms">Terms</a></p>
+    </footer>
+    
+    <!-- Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_TRACKING_ID');
+    </script>
+</body>
+</html>

@@ -1,0 +1,217 @@
+
+/* BAS Foundry Blog Styles */
+* {
+    margin: 0; padding: 0; box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #fff;
+}
+
+/* Header */
+header {
+    background: #1a1a1a;
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #4CAF50;
+}
+
+/* Main Content */
+main {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+.blog-post {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.post-header {
+    padding: 2rem 0 1rem;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 2rem;
+}
+
+.post-header h1 {
+    font-size: 2.5rem;
+    color: #1a1a1a;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.post-meta {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.post-meta time {
+    margin-right: 1rem;
+}
+
+/* Post Content */
+.post-content {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.post-content h2 {
+    font-size: 1.8rem;
+    margin: 2rem 0 1rem;
+    color: #2c3e50;
+}
+
+.post-content h3 {
+    font-size: 1.4rem;
+    margin: 1.5rem 0 0.5rem;
+    color: #34495e;
+}
+
+.post-content p {
+    margin-bottom: 1.5rem;
+}
+
+.post-content blockquote {
+    border-left: 4px solid #4CAF50;
+    padding: 1rem 1.5rem;
+    background: #f9f9f9;
+    margin: 1.5rem 0;
+    font-style: italic;
+}
+
+.post-content a {
+    color: #2980b9;
+    text-decoration: none;
+    border-bottom: 2px solid #3498db;
+    transition: all 0.3s ease;
+}
+
+.post-content a:hover {
+    background: #3498db;
+    color: white;
+    padding: 2px 4px;
+    border-radius: 3px;
+}
+
+.post-content ul, .post-content ol {
+    margin: 1rem 0 1.5rem 2rem;
+}
+
+.post-content li {
+    margin-bottom: 0.5rem;
+}
+
+/* Post Footer */
+.post-footer {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 2px solid #eee;
+}
+
+.affiliate-disclosure {
+    background: #fff3cd;
+    border: 1px solid #ffeaa7;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.affiliate-disclosure h3 {
+    color: #856404;
+    margin-bottom: 0.5rem;
+}
+
+.affiliate-disclosure p {
+    color: #856404;
+    font-size: 0.95rem;
+}
+
+.share-links {
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.share-links h3 {
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.share-links a {
+    display: inline-block;
+    margin: 0 0.5rem;
+    padding: 0.5rem 1rem;
+    background: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+.share-links a:hover {
+    background: #45a049;
+}
+
+/* Site Footer */
+.site-footer {
+    background: #1a1a1a;
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 4rem;
+}
+
+.site-footer a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .post-header h1 {
+        font-size: 2rem;
+    }
+    
+    nav {
+        padding: 0 1rem;
+    }
+    
+    main {
+        padding: 0 1rem;
+    }
+    
+    .share-links a {
+        display: block;
+        margin: 0.5rem 0;
+    }
+}

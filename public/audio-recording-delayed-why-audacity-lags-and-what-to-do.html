@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Recording Delayed? Why Audacity Lags and What to Do - BAS Foundry</title>
+    <meta name="description" content="**"I constantly get 'not responding'. It happens when I do noise reduction, compressing, normalizing, ACX check — basically anything."**">
+    <meta name="keywords" content="reduce, Software, Regardless, delay, app, reduction,, Adobe Audition recording Subscription auto renewal, responding'., noise, latency">
+    
+    <!-- Open Graph for social sharing -->
+    <meta property="og:title" content="Audio Recording Delayed? Why Audacity Lags and What to Do">
+    <meta property="og:description" content="**"I constantly get 'not responding'. It happens when I do noise reduction, compressing, normalizing, ACX check — basically anything."**">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://basfoundry.com/blog/audio-recording-delayed-why-audacity-lags-and-what-to-do">
+    
+    <!-- Schema.org markup for better SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Audio Recording Delayed? Why Audacity Lags and What to Do",
+      "description": "**"I constantly get 'not responding'. It happens when I do noise reduction, compressing, normalizing, ACX check — basically anything."**",
+      "author": {
+        "@type": "Organization",
+        "name": "BAS Foundry"
+      },
+      "datePublished": "2026-04-13",
+      "publisher": {
+        "@type": "Organization", 
+        "name": "BAS Foundry"
+      }
+    }
+    </script>
+    
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/" class="logo">BAS Foundry</a>
+            <div class="nav-links">
+                <a href="/blog">Blog</a>
+                <a href="/about">About</a>
+                <a href="/contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+        <article class="blog-post">
+            <header class="post-header">
+                <h1>Audio Recording Delayed? Why Audacity Lags and What to Do</h1>
+                <div class="post-meta">
+                    <time datetime="2026-04-13">April 13, 2026</time>
+                    <span class="reading-time">5 min read</span>
+                </div>
+            </header>
+            
+            <div class="post-content">
+                <h1 id="audio-recording-delayed-why-audacity-lags-and-what-to-do">Audio Recording Delayed? Why Audacity Lags and What to Do</h1>
+<p><strong>"I constantly get 'not responding'. It happens when I do noise reduction, compressing, normalizing, ACX check — basically anything."</strong></p>
+<p>That's a voice actor describing Audacity's lag in October 2018. The problem persists today.</p>
+<p><strong>"The delay is so high it kind of loses its purpose while trying to record lol."</strong> — A musician in February 2024 who couldn't reduce latency no matter what settings they tried.</p>
+<p>Audio editing should be responsive. When you press record, you should hear your voice immediately. When you apply an effect, it should apply in seconds, not minutes.</p>
+<h2 id="the-audacity-latency-lag-problem">The Audacity Latency &amp; Lag Problem</h2>
+<p><strong>Recording Latency:</strong></p>
+<blockquote>
+<p>"Can't get rid of latency. No matter what I do." — r/Music, Dec 2023</p>
+<p>"How do I reduce the latency during audio monitoring? The delay is so high it kind of loses its purpose while trying to record" — r/audacity, Feb 2024</p>
+<p>"Regardless what numerical value I put in for Audio to Buffer and Latency Correction, the darn delay is still very noticeably there" — r/audioengineering, July 2017 (user spent a month trying to fix it)</p>
+</blockquote>
+<p><strong>Editing Lag &amp; Freezes:</strong></p>
+<blockquote>
+<p>"When I do noise reduction, compressing, normalizing, ACX check — basically anything. On top of that when I am recording it constantly freezes" — r/VoiceActing, Oct 2018</p>
+<p>"Not responding" issues during effects processing</p>
+</blockquote>
+<p>The core issues:
+1. <strong>Monitoring latency</strong> — Hearing a delay between speaking and hearing your voice
+2. <strong>Effect processing lag</strong> — Taking 30+ seconds to apply simple effects
+3. <strong>Freezing during recording</strong> — UI becomes unresponsive while recording
+4. <strong>Ineffective buffer settings</strong> — Tweaking Audio to Buffer and Latency Correction doesn't help</p>
+<h2 id="why-audacity-has-these-problems">Why Audacity Has These Problems</h2>
+<ol>
+<li><strong>Software monitoring instead of hardware</strong> — Audacity routes audio through software, adding delay</li>
+<li><strong>Single-threaded processing</strong> — Effects run on one CPU core, slow on older computers</li>
+<li><strong>No GPU acceleration</strong> — Audio processing doesn't leverage graphics cards</li>
+<li><strong>Buffer implementation</strong> — Latency correction doesn't always work as intended</li>
+<li><strong>Audacity is open source</strong> — Development is slow, bugs persist for years</li>
+</ol>
+<h2 id="audio-editing-software-options-on-amazon">Audio Editing Software Options on Amazon</h2>
+<h3 id="1-adobe-audition-audio-recording-editing-and-mixing-software">1. <strong>Adobe Audition — Audio Recording, Editing, and Mixing Software</strong></h3>
+<p><em>Best for: Professional podcasting, voiceover, music production</em></p>
+<ul>
+<li>Real-time monitoring with near-zero latency</li>
+<li>GPU-accelerated effects processing (faster than Audacity)</li>
+<li>Industry-standard multitrack editing</li>
+<li>Integrated with Adobe Creative Cloud</li>
+<li>Adobe ecosystem integration if you use Premiere/Premiere Pro</li>
+</ul>
+<p><a href="https://www.amazon.com/Adobe-Audition-recording-Subscription-auto-renewal/dp/B07Q5VCZJW?tag=basfound-20">Adobe Audition on Amazon</a></p>
+<p><strong>Why it's faster:</strong> Adobe Audition uses hardware acceleration and optimized audio engines, significantly reducing effect processing time and monitoring latency compared to Audacity.</p>
+<hr />
+<h2 id="free-alternatives">Free Alternatives</h2>
+<h3 id="audacity-still-free"><strong>Audacity (Still Free)</strong></h3>
+<p>Despite the issues, Audacity is still useful if:
+- You accept latency during recording (use hardware monitoring or record blind)
+- You have patience for slower effect processing
+- You don't need real-time monitoring
+- You're okay with basic features</p>
+<p><strong>Workaround:</strong> Use your interface's zero-latency monitoring (bypass Audacity's software monitoring) and only use Audacity for editing, not monitoring.</p>
+<h3 id="ocenaudio-open-source-free"><strong>Ocenaudio (Open Source, Free)</strong></h3>
+<p>Simpler than Audacity, faster effect processing, but fewer features.</p>
+<h3 id="garageband-mac-only-free"><strong>GarageBand (Mac Only, Free)</strong></h3>
+<p>Real-time monitoring, low latency, good for beginners, but macOS only.</p>
+<h2 id="how-to-fix-audacity-latency">How to Fix Audacity Latency</h2>
+<p>Before buying anything, try these fixes:</p>
+<p><strong>Recording Latency:</strong>
+1. <strong>Disable software monitoring:</strong> In Recording settings, turn off "Software playthrough"
+2. <strong>Use hardware monitoring:</strong> Most audio interfaces have a direct monitor knob — use that instead
+3. <strong>Increase buffer size:</strong> Go to Edit → Preferences → Recording → Audio to Buffer → Increase (256 or higher)
+4. <strong>Check sample rate:</strong> Match Audacity sample rate with your audio interface (usually 44100Hz or 48000Hz)
+5. <strong>Use ASIO or WASAPI drivers:</strong> On Windows, WASAPI often has lower latency than MME</p>
+<p><strong>Editing Lag:</strong>
+1. <strong>Reduce selection size:</strong> Apply effects to smaller chunks instead of entire tracks
+2. <strong>Close other apps:</strong> Free up CPU and RAM
+3. <strong>Update to latest version:</strong> Audacity 3.x has performance improvements over 2.x
+4. <strong>Disable spectrogram view:</strong> Visual mode uses more CPU
+5. <strong>Render before effects:</strong> Split clips, render to new track, then apply effects</p>
+<p><strong>Latency Correction Settings:</strong></p>
+<pre><code class="language-text">Audacity → Preferences → Recording → Latency Correction
+Try these values (milliseconds):
+- USB Microphones: 0–50ms
+- Audio Interfaces: 10–100ms
+- Bluetooth: 100–300ms (avoid Bluetooth for recording if possible)
+</code></pre>
+<h2 id="what-about-adobe-audition-subscription">What About Adobe Audition Subscription?</h2>
+<p>Adobe Audition works differently:
+- <strong>Subscription model:</strong> Monthly or annual payment
+- <strong>Creative Cloud:</strong> Part of Adobe's ecosystem
+- <strong>Real-time monitoring</strong>: Hardware monitoring built-in
+- <strong>Faster effects</strong>: GPU acceleration</p>
+<p><strong>Is it worth it?</strong>
+- <strong>YES if:</strong> You podcast professionally, produce voiceover work, or need reliability
+- <strong>NO if:</strong> You're a hobbyist with basic recording needs</p>
+<h2 id="which-audio-editor-should-you-use">Which Audio Editor Should You Use?</h2>
+<table>
+<thead>
+<tr>
+<th>Use Case</th>
+<th>Recommendation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Professional podcasting/voiceover</strong></td>
+<td>Adobe Audition</td>
+</tr>
+<tr>
+<td><strong>Basic recording, editing</strong></td>
+<td>Audacity (with hardware monitoring)</td>
+</tr>
+<tr>
+<td><strong>Mac user, beginner</strong></td>
+<td>GarageBand (free)</td>
+</tr>
+<tr>
+<td><strong>Music production</strong></td>
+<td>Adobe Audition or Reaper (more specialized)</td>
+</tr>
+<tr>
+<td><strong>Quick voice notes</strong></td>
+<td>Your phone's voice recorder — honestly</td>
+</tr>
+<tr>
+<td><strong>YouTube voiceover</strong></td>
+<td>Audacity or GarageBand</td>
+</tr>
+</tbody>
+</table>
+<h2 id="hardware-that-reduces-audio-lag">Hardware That Reduces Audio Lag</h2>
+<p>Software isn't the only factor. If you have latency, check your gear:</p>
+<p><strong>Audio Interface (vs USB Mic):</strong>
+- Interfaces like Focusrite Scarlett have zero-latency hardware monitoring
+- USB mics rely on software monitoring (slower)
+- Investment: $100–200 for a good interface</p>
+<p><strong>Microphone Choice:</strong>
+- XLR mics + interface: Low latency, better quality
+- USB mics: Convenient, but prone to latency
+- Phone mics: Terrible for recording, but usable for quick notes</p>
+<h2 id="the-bottom-line">The Bottom Line</h2>
+<p>Audacity is free, but it has real performance issues that haven't been fixed for years. If latency drives you crazy:</p>
+<p><strong>For professionals:</strong> Adobe Audition is worth the subscription. Real-time monitoring and faster effects save hours of frustration.</p>
+<p><strong>For hobbyists:</strong> Stick with Audacity, but:
+- Use hardware monitoring (your interface's direct monitor knob)
+- Disable software playthrough in Audacity settings
+- Accept some lag during effect processing
+- Apply effects in smaller chunks</p>
+<p><strong>The real issue:</strong> Audacity's monitoring latency comes from software routing. Hardware monitoring (bypassing Audacity for monitoring) fixes it. If you don't have an interface with direct monitoring, that's your upgrade target — not necessarily new software.</p>
+<p><strong>Don't spend months tweaking Audacity settings that don't work. Get an audio interface with direct monitoring, or upgrade to Adobe Audition if you're serious about audio work.</strong></p>
+<hr />
+<p><em>Affiliate Disclosure: This article contains Amazon affiliate links. If you purchase through these links, we may earn a commission at no extra cost to you.</em></p>
+            </div>
+            
+            <footer class="post-footer">
+                <div class="affiliate-disclosure">
+                    <h3>🔍 Affiliate Disclosure</h3>
+                    <p>This post contains affiliate links. If you purchase through these links, 
+                    we may earn a small commission at no additional cost to you. This helps support 
+                    our research and content creation. We only recommend products we genuinely believe 
+                    will help solve your problems.</p>
+                </div>
+                
+                <div class="share-links">
+                    <h3>Share This Post</h3>
+                    <a href="https://twitter.com/intent/tweet?text=Audio%20Recording%20Delayed?%20Why%20Audacity%20Lags%20and%20What%20to%20Do&url=https://basfoundry.com/blog/audio-recording-delayed-why-audacity-lags-and-what-to-do" target="_blank">Twitter</a>
+                    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://basfoundry.com/blog/audio-recording-delayed-why-audacity-lags-and-what-to-do" target="_blank">LinkedIn</a>
+                    <a href="https://www.reddit.com/submit?url=https://basfoundry.com/blog/audio-recording-delayed-why-audacity-lags-and-what-to-do&title=Audio%20Recording%20Delayed?%20Why%20Audacity%20Lags%20and%20What%20to%20Do" target="_blank">Reddit</a>
+                </div>
+            </footer>
+        </article>
+    </main>
+    
+    <footer class="site-footer">
+        <p>&copy; 2026 BAS Foundry. Building better software solutions.</p>
+        <p><a href="/privacy">Privacy Policy</a> | <a href="/terms">Terms</a></p>
+    </footer>
+    
+    <!-- Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_TRACKING_ID');
+    </script>
+</body>
+</html>
