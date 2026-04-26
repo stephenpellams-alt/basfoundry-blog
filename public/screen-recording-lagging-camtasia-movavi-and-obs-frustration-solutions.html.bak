@@ -107,7 +107,7 @@
 <li>Good for gameplay or basic screen grabs</li>
 <li>Personal license for single user</li>
 </ul>
-<p><a href="https://www.amazon.com/dp/B0D6856BQV?tag=basfound-20">Movavi Screen Recorder on Amazon</a></p>
+<p><a href="https://www.amazon.com/Movavi-Screen-Recorder-Personal-Download/dp/B09LK3JKM1?tag=basfound-20">Movavi Screen Recorder on Amazon</a></p>
 <p><strong>Why it's better:</strong> No editor bloat means more resources for actual recording. If you just need to capture and save, Movavi is simpler.</p>
 <hr />
 <h3 id="3-cyberlink-powerdirector-365">3. <strong>CyberLink PowerDirector 365</strong></h3>
@@ -225,12 +225,12 @@
     </footer>
     
     <!-- Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VQSJ9FGENS"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXX"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'G-VQSJ9FGENS');
+        gtag('config', 'G-XXXXXXXX');
     </script>
 </body>
 </html>

@@ -1,0 +1,13 @@
+{
+  "currentProjects": 3,
+  "pendingApprovals": 3,
+  "completedToday": 0,
+  "revenue24h": 269.11,
+  "lastUpdate": "2026-04-13T03:16:02.955168+00:00",
+  "revenueBreakdown": {
+    "stripe": 45.67,
+    "affiliate": 23.45,
+    "manual": 199.99,
+    "total": 269.11
+  }
+}

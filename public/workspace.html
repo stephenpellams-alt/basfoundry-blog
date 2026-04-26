@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Workspace — BAS Foundry</title>
+  <meta name="description" content="Access your BAS Foundry workspace dashboard.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+          colors: {
+            primary: { 50: '#ecfdf5', 100: '#d1fae5', 500: '#10b981', 600: '#059669', 900: '#064e3b' },
+            accent: { 400: '#22d3ee', 500: '#06b6d4', 600: '#0891b2' }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .gradient-text {
+      background: linear-gradient(135deg, #10b981 0%, #06b6d4 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .glass {
+      background: rgba(17, 24, 39, 0.8);
+      backdrop-filter: blur(12px);
+    }
+  </style>
+</head>
+<body class="bg-slate-900 text-white min-h-screen flex flex-col">
+  <!-- Navigation -->
+  <nav class="glass sticky top-0 z-50 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <a href="/" class="flex items-center space-x-2">
+          <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-emerald-500 to-cyan-500 flex items-center justify-center font-bold text-white">B</div>
+          <span class="font-bold text-lg">BAS Foundry</span>
+        </a>
+        <div class="flex items-center space-x-6">
+          <a href="/blog.html" class="text-slate-300 hover:text-white transition">Reviews</a>
+          <a href="/about.html" class="text-slate-300 hover:text-white transition">About</a>
+          <a href="/contact.html" class="text-slate-300 hover:text-white transition">Contact</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Auth Gate -->
+  <main class="flex-grow flex items-center justify-center px-4 py-20">
+    <div class="max-w-md w-full">
+      <div class="text-center mb-8">
+        <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-emerald-500/20 to-cyan-500/20 flex items-center justify-center mx-auto mb-4 border border-emerald-500/30">
+          <svg class="w-8 h-8 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+          </svg>
+        </div>
+        <h1 class="text-3xl font-bold mb-2">Workspace Access</h1>
+        <p class="text-slate-400">Sign in to access your dashboard and tools</p>
+      </div>
+
+      <div class="glass rounded-2xl border border-slate-700 p-8">
+        <form id="loginForm" class="space-y-4">
+          <div>
+            <label class="block text-sm font-medium text-slate-300 mb-2">Email</label>
+            <input type="email" id="email" class="w-full px-4 py-3 rounded-lg bg-slate-800 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-emerald-500 transition" placeholder="you@example.com" required>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-slate-300 mb-2">Password</label>
+            <input type="password" id="password" class="w-full px-4 py-3 rounded-lg bg-slate-800 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-emerald-500 transition" placeholder="••••••••" required>
+          </div>
+          <button type="submit" class="w-full py-3 px-4 bg-gradient-to-r from-emerald-600 to-cyan-600 hover:from-emerald-500 hover:to-cyan-500 rounded-lg font-semibold transition shadow-lg shadow-emerald-900/30">
+            Sign In
+          </button>
+        </form>
+
+        <div id="message" class="mt-4 p-4 rounded-lg hidden"></div>
+
+        <div class="mt-6 text-center text-sm text-slate-500">
+          <p>Don't have an account? <a href="/contact.html" class="text-emerald-400 hover:text-emerald-300">Contact us</a> for access.</p>
+        </div>
+      </div>
+
+      <div class="mt-8 text-center">
+        <a href="/" class="text-slate-500 hover:text-slate-300 transition text-sm">← Back to home</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-800 bg-slate-900/50 py-8">
+    <div class="max-w-7xl mx-auto px-4 text-center text-slate-500 text-sm">
+      <p>&copy; 2026 BAS Foundry. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const msg = document.getElementById('message');
+      msg.className = 'mt-4 p-4 rounded-lg bg-amber-900/30 border border-amber-700/50 text-amber-200';
+      msg.textContent = 'This workspace is currently in closed beta. Contact us for early access.';
+      msg.classList.remove('hidden');
+    });
+  </script>
+</body>
+</html>

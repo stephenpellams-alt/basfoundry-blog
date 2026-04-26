@@ -1,0 +1,78 @@
+[
+  {
+    "id": "demo-001",
+    "title": "FileSweep Landing Page",
+    "type": "website",
+    "status": "rejected",
+    "description": "Marketing landing page for FileSweep with pricing tiers and call-to-action. Features responsive design and conversion optimization.",
+    "previewUrl": "/demos/filesweep-mockup.html",
+    "liveUrl": null,
+    "createdAt": "2026-04-12T10:30:00Z",
+    "updatedAt": "2026-04-13T03:31:48.119917+00:00",
+    "priority": "high",
+    "requiredBy": "2026-04-12T18:00:00Z",
+    "feedback": "Pricing is too high for target market. Pro tier should be $6/month instead of $9. Add social proof section with customer testimonials. Use more urgent copy like 'stop wasting 15 minutes every day searching for files'. Mobile spacing on CTA buttons needs fixing. Missing free trial countdown urgency.",
+    "artifacts": [
+      {
+        "name": "Design Mockup",
+        "url": "/demos/filesweep-mockup.html",
+        "type": "demo"
+      },
+      {
+        "name": "Conversion Analysis",
+        "url": "/docs/filesweep-conversion-analysis.pdf",
+        "type": "docs"
+      }
+    ],
+    "feedback": "Pricing is too high for target market. Pro tier should be /month instead of . Add social proof section with customer testimonials. Use more urgent copy like 'stop wasting 15 minutes every day searching for files'. Mobile spacing on CTA buttons needs fixing. Missing free trial countdown urgency."
+  },
+  {
+    "id": "demo-002",
+    "title": "Reddit Complaint Analysis Dashboard",
+    "type": "analysis",
+    "status": "review",
+    "description": "Interactive dashboard showing complaint clustering from r/productivity with 47 actionable insights identified for FileSweep positioning.",
+    "previewUrl": "/demos/reddit-dashboard.html",
+    "liveUrl": null,
+    "createdAt": "2026-04-12T08:15:00Z",
+    "updatedAt": "2026-04-12T09:45:00Z",
+    "priority": "medium",
+    "artifacts": [
+      {
+        "name": "Live Dashboard",
+        "url": "/demos/reddit-dashboard.html",
+        "type": "demo"
+      },
+      {
+        "name": "Raw Data Export",
+        "url": "/data/reddit-complaints.json",
+        "type": "data"
+      }
+    ]
+  },
+  {
+    "id": "6f7e62b2-3908-4c00-a410-cd7fcc485613",
+    "title": "ANVIL FileSweep Builder Status Update",
+    "type": "analysis",
+    "status": "pending",
+    "description": "ANVIL has been building FileSweep products but needs approval to proceed with current campaign. Status: 12 consecutive errors resolved, ready for next phase.",
+    "previewUrl": "/demos/anvil-status.html",
+    "liveUrl": null,
+    "createdAt": "2026-04-13T03:07:35.402532+00:00",
+    "updatedAt": "2026-04-13T03:07:35.402532+00:00",
+    "priority": "high",
+    "requiredBy": null,
+    "artifacts": [
+      {
+        "name": "Error Report",
+        "url": "/docs/anvil-error-resolution.md",
+        "type": "docs"
+      },
+      {
+        "name": "Current Build",
+        "url": "https://github.com/bas-foundry/filesweep",
+        "type": "docs"
+      }
+    ]
+  }
+]

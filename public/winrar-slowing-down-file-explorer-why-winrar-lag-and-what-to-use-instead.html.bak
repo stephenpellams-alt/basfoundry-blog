@@ -101,7 +101,7 @@
 <li>Recovery record feature (can recover corrupted archives)</li>
 <li>Strong encryption (AES-256)</li>
 </ul>
-<p><a href="https://www.amazon.com/dp/B07T3R7BK1?tag=basfound-20">WinRAR x64 Download on Amazon</a></p>
+<p><a href="https://www.amazon.com/rarlab-com-winrar-x64-download/dp/b00jab2fy4/?tag=basfound-20">WinRAR x64 Download on Amazon</a></p>
 <p><strong>Why buy WinRAR despite the issues?</strong> If you need RAR format support (specific to some software installations and game mods), WinRAR is the only option. But be prepared for context menu slowdowns on Windows 11.</p>
 <hr />
 <h3 id="2-winrar-x32-download">2. <strong>WinRAR x32 Download</strong></h3>
@@ -112,7 +112,7 @@
 <li>RAR format support</li>
 <li>40-day trial with nag screens afterward</li>
 </ul>
-<p><a href="https://www.amazon.com/dp/B07T3R7BK1?tag=basfound-20">WinRAR x32 Download on Amazon</a></p>
+<p><a href="https://www.amazon.com/Rarlab-WinRAR-x32-Download/dp/B00J99PL84/?tag=basfound-20">WinRAR x32 Download on Amazon</a></p>
 <p><strong>Why it matters:</strong> Most users should use x64, but if you're on an older 32-bit system, this is the only version that works.</p>
 <hr />
 <h2 id="free-alternatives">Free Alternatives</h2>
@@ -304,12 +304,12 @@
     </footer>
     
     <!-- Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VQSJ9FGENS"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXX"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'G-VQSJ9FGENS');
+        gtag('config', 'G-XXXXXXXX');
     </script>
 </body>
 </html>

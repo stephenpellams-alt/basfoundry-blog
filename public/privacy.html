@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — BAS Foundry</title>
+  <meta name="description" content="BAS Foundry privacy policy and data practices.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+          colors: {
+            primary: { 50: '#ecfdf5', 100: '#d1fae5', 500: '#10b981', 600: '#059669', 900: '#064e3b' },
+            accent: { 400: '#22d3ee', 500: '#06b6d4', 600: '#0891b2' }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .gradient-text {
+      background: linear-gradient(135deg, #10b981 0%, #06b6d4 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .glass { background: rgba(17, 24, 39, 0.8); backdrop-filter: blur(12px); }
+    .prose h2 { color: #10b981; font-size: 1.5rem; font-weight: 600; margin-top: 2rem; margin-bottom: 1rem; }
+    .prose p { margin-bottom: 1rem; line-height: 1.7; }
+    .prose ul { list-style: disc; margin-left: 1.5rem; margin-bottom: 1rem; }
+    .prose li { margin-bottom: 0.5rem; }
+  </style>
+</head>
+<body class="bg-slate-900 text-slate-300 min-h-screen flex flex-col">
+  <!-- Navigation -->
+  <nav class="glass sticky top-0 z-50 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <a href="/" class="flex items-center space-x-2">
+          <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-emerald-500 to-cyan-500 flex items-center justify-center font-bold text-white">B</div>
+          <span class="font-bold text-lg text-white">BAS Foundry</span>
+        </a>
+        <div class="flex items-center space-x-6">
+          <a href="/blog.html" class="hover:text-white transition">Reviews</a>
+          <a href="/about.html" class="hover:text-white transition">About</a>
+          <a href="/contact.html" class="hover:text-white transition">Contact</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Content -->
+  <main class="flex-grow py-16 px-4">
+    <div class="max-w-3xl mx-auto">
+      <div class="mb-12 text-center">
+        <h1 class="text-4xl font-bold text-white mb-4">Privacy Policy</h1>
+        <p class="text-slate-400">Last updated: April 26, 2026</p>
+      </div>
+
+      <div class="glass rounded-2xl border border-slate-700 p-8 md:p-12 prose prose-invert max-w-none">
+        <p>BAS Foundry ("we", "us", or "our") respects your privacy. This Privacy Policy explains how we collect, use, and protect your information when you visit our website.</p>
+
+        <h2>Information We Collect</h2>
+        <p>We collect minimal information to improve your experience:</p>
+        <ul>
+          <li><strong>Usage Data:</strong> Pages visited, time spent, referral sources (via anonymous analytics)</li>
+          <li><strong>Contact Information:</strong> Only when you voluntarily contact us via email or forms</li>
+          <li><strong>Cookies:</strong> Essential cookies for site functionality only</li>
+        </ul>
+
+        <h2>How We Use Your Information</h2>
+        <ul>
+          <li>Improve website content and user experience</li>
+          <li>Respond to your inquiries</li>
+          <li>Analyze which reviews and tools are most helpful</li>
+          <li>Prevent fraud and abuse</li>
+        </ul>
+
+        <h2>Affiliate Disclosure</h2>
+        <p>BAS Foundry participates in affiliate marketing programs. When you click on product links and make purchases, we may earn a commission at no additional cost to you. We only recommend products we genuinely believe in after independent research.</p>
+
+        <h2>Third-Party Services</h2>
+        <p>We use trusted third-party services:</p>
+        <ul>
+          <li>Vercel (website hosting)</li>
+          <li>Google Fonts (typography)</li>
+          <li>Analytics (privacy-focused, anonymous)</li>
+        </ul>
+
+        <h2>Data Security</h2>
+        <p>We implement reasonable security measures to protect your information. However, no internet transmission is 100% secure. We limit data collection to only what's necessary.</p>
+
+        <h2>Your Rights</h2>
+        <ul>
+          <li>Access: Request what data we have about you</li>
+          <li>Deletion: Request deletion of your data</li>
+          <li>Opt-out: Disable analytics via browser settings</li>
+        </ul>
+
+        <h2>Contact Us</h2>
+        <p>For privacy-related questions, email: <a href="mailto:privacy@basfoundry.com" class="text-emerald-400 hover:text-emerald-300">privacy@basfoundry.com</a></p>
+
+        <h2>Changes to This Policy</h2>
+        <p>We may update this policy periodically. Changes will be posted here with an updated date.</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-800 bg-slate-900/50 py-8">
+    <div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
+      <p class="text-slate-500 text-sm">&copy; 2026 BAS Foundry. All rights reserved.</p>
+      <div class="flex space-x-4 text-sm">
+        <a href="/privacy.html" class="text-slate-400 hover:text-white">Privacy</a>
+        <a href="/contact.html" class="text-slate-400 hover:text-white">Contact</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

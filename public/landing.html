@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BAS Foundry — Affiliate Marketing Intelligence</title>
+  <meta name="description" content="We analyze customer complaints to find products that work, then earn commissions helping people find solutions.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            primary: {
+              50: '#ecfdf5',
+              100: '#d1fae5',
+              200: '#a7f3d0',
+              300: '#6ee7b7',
+              400: '#34d399',
+              500: '#10b981',
+              600: '#059669',
+              700: '#047857',
+              800: '#065f46',
+              900: '#064e3b',
+            },
+            accent: {
+              400: '#22d3ee',
+              500: '#06b6d4',
+              600: '#0891b2',
+            }
+          },
+          animation: {
+            'fade-up': 'fadeUp 0.8s ease-out forwards',
+            'fade-in': 'fadeIn 0.6s ease-out forwards',
+            'slide-in': 'slideIn 0.6s ease-out forwards',
+            'glow-pulse': 'glowPulse 3s ease-in-out infinite',
+            'float': 'float 6s ease-in-out infinite',
+          },
+          keyframes: {
+            fadeUp: {
+              '0%': { opacity: '0', transform: 'translateY(30px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            },
+            fadeIn: {
+              '0%': { opacity: '0' },
+              '100%': { opacity: '1' },
+            },
+            slideIn: {
+              '0%': { opacity: '0', transform: 'translateX(-20px)' },
+              '100%': { opacity: '1', transform: 'translateX(0)' },
+            },
+            glowPulse: {
+              '0%, 100%': { boxShadow: '0 0 20px rgba(16, 185, 129, 0.3)' },
+              '50%': { boxShadow: '0 0 40px rgba(16, 185, 129, 0.6)' },
+            },
+            float: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-10px)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    /* Base styles */
+    body { font-family: 'Inter', system-ui, sans-serif; }
+    
+    /* Gradient text */
+    .gradient-text {
+      background: linear-gradient(135deg, #10b981 0%, #06b6d4 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    /* Glass effect */
+    .glass {
+      background: rgba(17, 24, 39, 0.7);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+    
+    /* Glow effects */
+    .glow-primary {
+      box-shadow: 0 0 30px rgba(16, 185, 129, 0.4);
+    }
+    
+    .glow-accent {
+      box-shadow: 0 0 30px rgba(6, 182, 212, 0.4);
+    }
+    
+    /* Animated gradient background */
+    .animated-gradient {
+      background: linear-gradient(-45deg, #0f172a, #1e293b, #0f172a, #164e63);
+      background-size: 400% 400%;
+      animation: gradientShift 15s ease infinite;
+    }
+    
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    
+    /* Scroll reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease-out;
+    }
+    
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    /* Stagger delays */
+    .stagger-1 { transition-delay: 0.1s; }
+    .stagger-2 { transition-delay: 0.2s; }
+    .stagger-3 { transition-delay: 0.3s; }
+    .stagger-4 { transition-delay: 0.4s; }
+    
+    /* Button hover effects */
+    .btn-primary {
+      transition: all 0.3s ease;
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 40px rgba(16, 185, 129, 0.4);
+    }
+    
+    .btn-secondary {
+      transition: all 0.3s ease;
+    }
+    .btn-secondary:hover {
+      transform: translateY(-2px);
+      border-color: #10b981;
+      color: #10b981;
+    }
+    
+    /* Card hover */
+    .feature-card {
+      transition: all 0.4s ease;
+    }
+    .feature-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    }
+    
+    /* Nav scroll state */
+    .nav-scrolled {
+      background: rgba(15, 23, 42, 0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    /* Grid pattern overlay */
+    .grid-pattern {
+      background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+    
+    /* Scrollbar styling */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0f172a;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #334155;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #475569;
+    }
+  </style>
+</head>
+<body class="bg-slate-900 text-white antialiased overflow-x-hidden">
+
+  <!-- Navigation -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between">
+        <!-- Logo -->
+        <a href="#" class="flex items-center gap-3 group">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center text-white font-bold text-xl group-hover:scale-110 transition-transform duration-300">
+            B
+          </div>
+          <span class="font-bold text-xl tracking-tight">BAS Foundry</span>
+        </a>
+        
+        <!-- Desktop Nav -->
+        <div class="hidden md:flex items-center gap-8">
+          <a href="#process" class="text-slate-300 hover:text-white transition-colors text-sm font-medium">Process</a>
+          <a href="#products" class="text-slate-300 hover:text-white transition-colors text-sm font-medium">Products</a>
+          <a href="#about" class="text-slate-300 hover:text-white transition-colors text-sm font-medium">About</a>
+          <a href="/workspace" class="btn-primary px-5 py-2.5 bg-primary-600 hover:bg-primary-500 rounded-lg text-sm font-semibold">
+            Workspace
+          </a>
+        </div>
+        
+        <!-- Mobile menu button -->
+        <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-slate-800 transition-colors">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+      <div class="flex flex-col gap-2 px-4">
+        <a href="#process" class="py-2 text-slate-300 hover:text-white transition-colors">Process</a>
+        <a href="#products" class="py-2 text-slate-300 hover:text-white transition-colors">Products</a>
+        <a href="#about" class="py-2 text-slate-300 hover:text-white transition-colors">About</a>
+        <a href="/workspace" class="py-2 text-primary-400 font-semibold">Workspace →</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <!-- Background effects -->
+    <div class="absolute inset-0 animated-gradient opacity-50"></div>
+    <div class="absolute inset-0 grid-pattern"></div>
+    
+    <!-- Floating orbs -->
+    <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-primary-500/20 rounded-full blur-3xl animate-float"></div>
+    <div class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-accent-500/20 rounded-full blur-3xl animate-float" style="animation-delay: 2s;"></div>
+    
+    <!-- Content -->
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
+      <div class="text-center max-w-4xl mx-auto">
+        <!-- Badge -->
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-8 animate-fade-in">
+          <span class="w-2 h-2 rounded-full bg-primary-400 animate-pulse"></span>
+          <span class="text-sm text-slate-300">Affiliate Marketing Intelligence</span>
+        </div>
+        
+        <!-- Headline -->
+        <h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight mb-6 animate-fade-up">
+          Find Products That
+          <span class="gradient-text block mt-2">Actually Solve Problems</span>
+        </h1>
+        
+        <!-- Subhead -->
+        <p class="text-xl text-slate-400 max-w-2xl mx-auto mb-10 animate-fade-up" style="animation-delay: 0.2s;">
+          We analyze customer complaints across Reddit, forums, and reviews to identify real pain points—then find and recommend products that genuinely fix them.
+        </p>
+        
+        <!-- CTA Buttons -->
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-up" style="animation-delay: 0.4s;">
+          <a href="#products" class="btn-primary px-8 py-4 bg-primary-600 hover:bg-primary-500 rounded-xl text-lg font-semibold flex items-center gap-2">
+            Browse Categories
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+            </svg>
+          </a>
+          <a href="#process" class="btn-secondary px-8 py-4 border border-slate-600 rounded-xl text-lg font-medium">
+            See Our Process
+          </a>
+        </div>
+        
+        <!-- Trust badges -->
+        <div class="mt-16 pt-8 border-t border-white/10 animate-fade-up" style="animation-delay: 0.6s;">
+          <p class="text-sm text-slate-500 mb-4">Built with transparency</p>
+          <div class="flex flex-wrap justify-center gap-6 text-sm text-slate-400">
+            <span class="flex items-center gap-2">
+              <svg class="w-5 h-5 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+              FTC Compliant
+            </span>
+            <span class="flex items-center gap-2">
+              <svg class="w-5 h-5 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+              Data-Driven
+            </span>
+            <span class="flex items-center gap-2">
+              <svg class="w-5 h-5 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+              Honest Reviews
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+      <svg class="w-6 h-6 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- Process Section -->
+  <section id="process" class="py-24 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 reveal">
+        <h2 class="text-3xl sm:text-4xl font-bold mb-4">How It Works</h2>
+        <p class="text-slate-400 text-lg max-w-2xl mx-auto">Our four-step process turns customer complaints into profitable, helpful recommendations.</p>
+      </div>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Step 1 -->
+        <div class="feature-card reveal stagger-1 bg-slate-800/50 border border-white/5 rounded-2xl p-8">
+          <div class="w-14 h-14 rounded-xl bg-primary-500/10 flex items-center justify-center mb-6">
+            <svg class="w-7 h-7 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Complaint Analysis</h3>
+          <p class="text-slate-400">We scan Reddit, forums, and reviews to identify what people actually struggle with.</p>
+        </div>
+        
+        <!-- Step 2 -->
+        <div class="feature-card reveal stagger-2 bg-slate-800/50 border border-white/5 rounded-2xl p-8">
+          <div class="w-14 h-14 rounded-xl bg-accent-500/10 flex items-center justify-center mb-6">
+            <svg class="w-7 h-7 text-accent-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Solution Matching</h3>
+          <p class="text-slate-400">We find products in the market that genuinely solve those identified problems.</p>
+        </div>
+        
+        <!-- Step 3 -->
+        <div class="feature-card reveal stagger-3 bg-slate-800/50 border border-white/5 rounded-2xl p-8">
+          <div class="w-14 h-14 rounded-xl bg-purple-500/10 flex items-center justify-center mb-6">
+            <svg class="w-7 h-7 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Honest Reviews</h3>
+          <p class="text-slate-400">We write detailed, transparent reviews with clear affiliate disclosures.</p>
+        </div>
+        
+        <!-- Step 4 -->
+        <div class="feature-card reveal stagger-4 bg-slate-800/50 border border-white/5 rounded-2xl p-8">
+          <div class="w-14 h-14 rounded-xl bg-orange-500/10 flex items-center justify-center mb-6">
+            <svg class="w-7 h-7 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Real Data</h3>
+          <p class="text-slate-400">All recommendations backed by evidence, not marketing fluff.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section id="products" class="py-24 relative bg-slate-950">
+    <div class="absolute inset-0 grid-pattern opacity-50"></div>
+    
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 reveal">
+        <h2 class="text-3xl sm:text-4xl font-bold mb-4">Product Categories</h2>
+        <p class="text-slate-400 text-lg max-w-2xl mx-auto">Curated collections of tools that solve real problems we've identified through complaint analysis.</p>
+      </div>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <!-- Productivity -->
+        <div class="feature-card reveal stagger-1 group bg-slate-900 border border-white/5 rounded-2xl p-8 hover:border-primary-500/30">
+          <div class="flex items-start justify-between mb-6">
+            <div class="w-14 h-14 rounded-xl bg-blue-500/10 flex items-center justify-center text-2xl">
+              📊
+            </div>
+            <span class="text-xs font-medium text-slate-500 uppercase tracking-wider">Software</span>
+          </div>
+          <h3 class="text-2xl font-bold mb-3 group-hover:text-primary-400 transition-colors">Productivity Tools</h3>
+          <p class="text-slate-400 mb-6">Software that actually makes you more productive, vetted through complaint analysis from power users.</p>
+          <a href="/category/productivity" class="inline-flex items-center gap-2 text-primary-400 font-medium hover:gap-3 transition-all">
+            Browse Reviews 
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+            </svg>
+          </a>
+        </div>
+        
+        <!-- Dev Tools -->
+        <div class="feature-card reveal stagger-2 group bg-slate-900 border border-white/5 rounded-2xl p-8 hover:border-accent-500/30">
+          <div class="flex items-start justify-between mb-6">
+            <div class="w-14 h-14 rounded-xl bg-cyan-500/10 flex items-center justify-center text-2xl">
+              ⚡
+            </div>
+            <span class="text-xs font-medium text-slate-500 uppercase tracking-wider">Development</span>
+          </div>
+          <h3 class="text-2xl font-bold mb-3 group-hover:text-accent-400 transition-colors">Developer Tools</h3>
+          <p class="text-slate-400 mb-6">Code editors, deployment tools, and dev utilities that solve real developer pain points found on GitHub Issues.</p>
+          <a href="/category/dev-tools" class="inline-flex items-center gap-2 text-accent-400 font-medium hover:gap-3 transition-all">
+            Browse Reviews 
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+            </svg>
+          </a>
+        </div>
+        
+        <!-- Business -->
+        <div class="feature-card reveal stagger-3 group bg-slate-900 border border-white/5 rounded-2xl p-8 hover:border-purple-500/30">
+          <div class="flex items-start justify-between mb-6">
+            <div class="w-14 h-14 rounded-xl bg-purple-500/10 flex items-center justify-center text-2xl">
+              💼
+            </div>
+            <span class="text-xs font-medium text-slate-500 uppercase tracking-wider">Business</span>
+          </div>
+          <h3 class="text-2xl font-bold mb-3 group-hover:text-purple-400 transition-colors">Business Software</h3>
+          <p class="text-slate-400 mb-6">CRM, project management, and business tools recommended based on user feedback analysis from SMB forums.</p>
+          <a href="/category/business" class="inline-flex items-center gap-2 text-purple-400 font-medium hover:gap-3 transition-all">
+            Browse Reviews 
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+            </svg>
+          </a>
+        </div>
+        
+        <!-- Home -->
+        <div class="feature-card reveal stagger-4 group bg-slate-900 border border-white/5 rounded-2xl p-8 hover:border-orange-500/30">
+          <div class="flex items-start justify-between mb-6">
+            <div class="w-14 h-14 rounded-xl bg-orange-500/10 flex items-center justify-center text-2xl">
+              🏠
+            </div>
+            <span class="text-xs font-medium text-slate-500 uppercase tracking-wider">Physical</span>
+          </div>
+          <h3 class="text-2xl font-bold mb-3 group-hover:text-orange-400 transition-colors">Home & Garden</h3>
+          <p class="text-slate-400 mb-6">Physical products and home solutions found by analyzing Amazon reviews, Reddit, and homeowner forums.</p>
+          <a href="/category/home" class="inline-flex items-center gap-2 text-orange-400 font-medium hover:gap-3 transition-all">
+            Browse Reviews 
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-24 relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-primary-900/20 to-accent-900/20"></div>
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-px bg-gradient-to-r from-transparent via-primary-500/50 to-transparent"></div>
+    
+    <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
+      <h2 class="text-4xl sm:text-5xl font-bold mb-6">Ready to Find Better Products?</h2>
+      <p class="text-xl text-slate-400 mb-10 max-w-2xl mx-auto">
+        Stop guessing. Start buying based on real data from real people with real problems.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#products" class="btn-primary px-8 py-4 bg-primary-600 hover:bg-primary-500 rounded-xl text-lg font-semibold glow-primary">
+          Explore Categories
+        </a>
+        <a href="/workspace" class="btn-secondary px-8 py-4 border border-slate-600 rounded-xl text-lg font-medium">
+          Enter Workspace
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-12 border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center text-white font-bold">B</div>
+          <span class="font-bold text-lg">BAS Foundry</span>
+        </div>
+        
+        <div class="flex gap-8 text-sm text-slate-400">
+          <a href="/legal/privacy" class="hover:text-white transition-colors">Privacy</a>
+          <a href="/legal/terms" class="hover:text-white transition-colors">Terms</a>
+          <a href="/contact" class="hover:text-white transition-colors">Contact</a>
+        </div>
+      </div>
+      
+      <div class="mt-8 pt-8 border-t border-white/5 text-center text-sm text-slate-500">
+        <p class="mb-2"><strong class="text-slate-400">FTC Disclosure:</strong> BAS Foundry earns commissions from affiliate links.</p>
+        <p>We only recommend products we believe solve real problems based on complaint analysis.</p>
+        <p class="mt-4">© 2026 BAS Foundry. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Navigation scroll effect
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add('nav-scrolled');
+      } else {
+        navbar.classList.remove('nav-scrolled');
+      }
+    });
+    
+    // Mobile menu toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+    
+    // Scroll reveal animation
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    }, observerOptions);
+    
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+          // Close mobile menu if open
+          mobileMenu.classList.add('hidden');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

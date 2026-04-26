@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FileSweep - Intelligent File Organization</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif; 
+            line-height: 1.6;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        
+        header { background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); padding: 20px 0; box-shadow: 0 2px 20px rgba(0,0,0,0.1); }
+        nav { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 24px; font-weight: bold; color: #4a5568; }
+        .nav-links { display: flex; gap: 30px; list-style: none; }
+        .nav-links a { text-decoration: none; color: #4a5568; font-weight: 500; }
+        
+        .hero { padding: 80px 0; text-align: center; color: white; }
+        .hero h1 { font-size: 48px; font-weight: bold; margin-bottom: 20px; }
+        .hero p { font-size: 20px; margin-bottom: 40px; opacity: 0.9; }
+        
+        .cta-button { 
+            display: inline-block; 
+            background: #48bb78; 
+            color: white; 
+            padding: 15px 30px; 
+            border-radius: 8px; 
+            text-decoration: none; 
+            font-weight: 600;
+            transition: transform 0.2s;
+        }
+        .cta-button:hover { transform: translateY(-2px); }
+        
+        .features { padding: 80px 0; background: white; }
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-top: 40px; }
+        .feature-card { text-align: center; padding: 30px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); }
+        .feature-icon { width: 60px; height: 60px; background: #e6fffa; border-radius: 50%; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; color: #38b2ac; font-size: 24px; }
+        
+        .pricing { padding: 80px 0; background: #f7fafc; }
+        .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 40px; }
+        .pricing-card { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); text-align: center; }
+        .pricing-card.featured { border: 2px solid #48bb78; position: relative; }
+        .price { font-size: 48px; font-weight: bold; color: #48bb78; margin: 20px 0; }
+        .price-features { list-style: none; margin: 30px 0; }
+        .price-features li { padding: 8px 0; color: #4a5568; }
+        
+        footer { background: #2d3748; color: white; padding: 40px 0; text-align: center; }
+        
+        .demo-banner { 
+            position: fixed; 
+            top: 0; 
+            left: 0; 
+            right: 0; 
+            background: #f56565; 
+            color: white; 
+            text-align: center; 
+            padding: 10px; 
+            z-index: 1000;
+            font-weight: bold;
+        }
+        body { padding-top: 50px; }
+    </style>
+</head>
+<body>
+    <div class="demo-banner">
+        🔍 PREVIEW MODE - This is what the FileSweep landing page would look like
+    </div>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">FileSweep</div>
+                <ul class="nav-links">
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Organize Your Digital Life</h1>
+            <p>AI-powered file organization that learns your habits and keeps everything perfectly sorted</p>
+            <a href="#pricing" class="cta-button">Start Free Trial</a>
+        </div>
+    </section>
+
+    <section class="features" id="features">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 36px; margin-bottom: 20px;">Why FileSweep?</h2>
+            <p style="text-align: center; color: #666; font-size: 18px;">Stop wasting time searching for files. Let AI do the organizing.</p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🤖</div>
+                    <h3>Smart AI Learning</h3>
+                    <p>Learns from your file usage patterns to predict where new files should go</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Instant Organization</h3>
+                    <p>Automatically sorts downloads, documents, and media in real-time</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔍</div>
+                    <h3>Smart Search</h3>
+                    <p>Find any file instantly with natural language search</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 36px; margin-bottom: 20px;">Simple Pricing</h2>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Free</h3>
+                    <div class="price">$0<span style="font-size: 16px; color: #666;">/month</span></div>
+                    <ul class="price-features">
+                        <li>Up to 1,000 files</li>
+                        <li>Basic auto-sorting</li>
+                        <li>Email support</li>
+                    </ul>
+                    <button class="cta-button" style="border: none; cursor: pointer; width: 100%;">Get Started</button>
+                </div>
+                
+                <div class="pricing-card featured">
+                    <div style="position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: #48bb78; color: white; padding: 6px 20px; border-radius: 20px; font-size: 12px; font-weight: bold;">MOST POPULAR</div>
+                    <h3>Pro</h3>
+                    <div class="price">$9<span style="font-size: 16px; color: #666;">/month</span></div>
+                    <ul class="price-features">
+                        <li>Unlimited files</li>
+                        <li>Advanced AI sorting</li>
+                        <li>Custom rules</li>
+                        <li>Priority support</li>
+                    </ul>
+                    <button class="cta-button" style="border: none; cursor: pointer; width: 100%;">Start Free Trial</button>
+                </div>
+                
+                <div class="pricing-card">
+                    <h3>Enterprise</h3>
+                    <div class="price">$29<span style="font-size: 16px; color: #666;">/month</span></div>
+                    <ul class="price-features">
+                        <li>Team collaboration</li>
+                        <li>Admin dashboard</li>
+                        <li>Custom integrations</li>
+                        <li>24/7 phone support</li>
+                    </ul>
+                    <button class="cta-button" style="border: none; cursor: pointer; width: 100%;">Contact Sales</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 FileSweep. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Demo interaction
+        document.querySelectorAll('.cta-button, button').forEach(button => {
+            button.addEventListener('click', (e) => {
+                e.preventDefault();
+                alert('This is a demo! In the real version, this would start the signup process.');
+            });
+        });
+    </script>
+</body>
+</html>

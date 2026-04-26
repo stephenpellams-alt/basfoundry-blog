@@ -1,0 +1,8 @@
+# Redirect all routes to appropriate HTML files or index.html for SPA
+/workspace    /workspace.html   200
+/contact      /contact.html   200  
+/legal/privacy /privacy.html  200
+/category/*   /index.html    200
+
+# Fallback for SPA routes
+/*            /index.html    200
