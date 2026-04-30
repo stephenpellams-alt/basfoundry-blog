@@ -7,8 +7,28 @@
       "destination": "/workspace.html"
     },
     {
+      "source": "/workspace.html",
+      "destination": "/workspace.html"
+    },
+    {
       "source": "/contact",
       "destination": "/contact.html"
+    },
+    {
+      "source": "/contact.html",
+      "destination": "/contact.html"
+    },
+    {
+      "source": "/about",
+      "destination": "/about.html"
+    },
+    {
+      "source": "/about.html",
+      "destination": "/about.html"
+    },
+    {
+      "source": "/blog",
+      "destination": "/index.html"
     },
     {
       "source": "/legal/privacy",
@@ -19,7 +39,7 @@
       "destination": "/index.html"
     },
     {
-      "source": "/(.*)",
+      "source": "/:path*",
       "destination": "/index.html"
     }
   ],
